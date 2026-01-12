@@ -129,12 +129,6 @@ export function initElevenLabsVoice(lang = 'en', suffix = '') {
       // Build session config - use WebRTC for more stable connection
       const sessionConfig = {
         agentId: AGENT_ID,
-        connectionType: 'webrtc',
-        overrides: {
-          tts: {
-            voiceId: voiceIds[selectedVoice]
-          }
-        },
         onConnect: () => {
           console.log('Connected to ElevenLabs');
           callStatus.textContent = t.connected;
