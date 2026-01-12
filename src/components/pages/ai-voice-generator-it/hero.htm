@@ -66,96 +66,77 @@
               <div class="relative z-10 space-y-6">
                 <!-- Title -->
                 <div class="space-y-2 text-center">
-                  <h2 class="text-white text-xl font-semibold md:text-2xl">
+                  <h2 class="text-white text-xl font-semibold md:text-2xl" id="hero-title-it">
                     Inizia a parlare con il nostro Agente Vocale AI
                   </h2>
-                  <p class="text-white/70 text-base">
+                  <p class="text-white/70 text-base" id="hero-subtitle-it">
                     Consenti l'accesso al microfono e inizia a chattare con il nostro agente vocale in tempo reale.
                   </p>
                 </div>
 
                 <!-- Voice Agent Selection Pills -->
-                <div class="inline-flex w-full justify-center">
+                <div class="inline-flex w-full justify-center" id="voice-pills-container-it">
                   <div class="agent-pills-container flex flex-wrap items-center justify-center gap-2 rounded-[40px] bg-white/20 backdrop-blur-[20px] px-4 py-3 lg:flex-nowrap" aria-label="Seleziona agente vocale">
                     <button
                       type="button"
-                      class="voice-agent-pill active rounded-full border border-white bg-white px-4 py-1.5 text-sm font-medium text-[#9333ea] transition-all focus:outline-none cursor-default"
+                      class="voice-agent-pill-it active rounded-full border border-white bg-white px-4 py-1.5 text-sm font-medium text-[#9333ea] transition-all focus:outline-none cursor-default"
                       data-agent="ava"
+                      data-voice-id="OUBnvvuqEKdDWtapoJFn"
                     >
                       Ava
                     </button>
                     <button
                       type="button"
-                      class="voice-agent-pill rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
+                      class="voice-agent-pill-it rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
                       data-agent="ethan"
+                      data-voice-id="irAl0cku0Hx4TEUJ8d1Q"
                     >
                       Ethan
                     </button>
                     <button
                       type="button"
-                      class="voice-agent-pill rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
+                      class="voice-agent-pill-it rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
                       data-agent="sophia"
+                      data-voice-id="4xkUqaR9MYOJHoaC1Nak"
                     >
                       Sophia
                     </button>
                     <button
                       type="button"
-                      class="voice-agent-pill rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
+                      class="voice-agent-pill-it rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
                       data-agent="liam"
+                      data-voice-id="2OoHspMHbpIu5oiMaqDy"
                     >
                       Liam
                     </button>
                     <button
                       type="button"
-                      class="voice-agent-pill rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
+                      class="voice-agent-pill-it rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
                       data-agent="emma"
+                      data-voice-id="QITiGyM4owEZrBEf0QV8"
                     >
                       Emma
                     </button>
                     <button
                       type="button"
-                      class="voice-agent-pill rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
-                      data-agent="custom"
+                      class="voice-agent-pill-it rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
+                      data-agent="marco"
+                      data-voice-id="UgBBYS2sOqTuMpoF3BR0"
                     >
-                      <span class="mr-1">+</span> Personalizzato
+                      Marco
                     </button>
                   </div>
                 </div>
 
-                <style>
-                  .voice-agent-pill.active {
-                    cursor: default !important;
-                  }
-                  .voice-agent-pill.active:hover {
-                    background-color: white !important;
-                  }
-                </style>
-                <script>
-                  document.addEventListener('DOMContentLoaded', function() {
-                    const pills = document.querySelectorAll('.voice-agent-pill');
-                    pills.forEach(pill => {
-                      pill.addEventListener('click', function() {
-                        pills.forEach(p => {
-                          p.classList.remove('active', 'bg-white', 'border-white', 'text-[#9333ea]');
-                          p.classList.add('bg-white/30', 'border-transparent', 'text-black/80');
-                        });
-                        this.classList.remove('bg-white/30', 'border-transparent', 'text-black/80');
-                        this.classList.add('active', 'bg-white', 'border-white', 'text-[#9333ea]');
-                      });
-                    });
-                  });
-                </script>
-
-                <!-- Action Buttons -->
-                <div class="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
-                  <!-- Start Call Button (in browser) with glass underlay -->
+                <!-- Action Buttons - Normal State -->
+                <div class="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row" id="call-buttons-it">
+                  <!-- Start Call Button -->
                   <div class="relative p-1">
-                    <!-- Glass underlay background -->
                     <div class="absolute inset-0 bg-white/20 backdrop-blur-md rounded-full border border-white/30"></div>
                     <button
                       type="button"
                       class="relative cursor-pointer group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#7B3FE4] via-[#C23DBE] to-[#F06A3A] px-7 py-3 text-base font-medium text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#7B3FE4]/50"
-                      id="start-call-btn"
+                      id="start-call-btn-it"
                     >
                       <span>Inizia Chiamata</span>
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -174,6 +155,37 @@
                     </svg>
                     <span>Chiamaci Invece</span>
                   </a>
+                </div>
+
+                <!-- Active Call UI (hidden by default) -->
+                <div class="hidden flex-col items-center justify-center gap-4 pt-2" id="active-call-ui-it">
+                  <!-- Audio Visualizer -->
+                  <div class="flex items-center justify-center gap-1 h-16" id="audio-visualizer-it">
+                    <div class="audio-bar-it w-1 bg-white rounded-full animate-pulse" style="height: 20px; animation-delay: 0ms;"></div>
+                    <div class="audio-bar-it w-1 bg-white rounded-full animate-pulse" style="height: 35px; animation-delay: 100ms;"></div>
+                    <div class="audio-bar-it w-1 bg-white rounded-full animate-pulse" style="height: 25px; animation-delay: 200ms;"></div>
+                    <div class="audio-bar-it w-1 bg-white rounded-full animate-pulse" style="height: 40px; animation-delay: 300ms;"></div>
+                    <div class="audio-bar-it w-1 bg-white rounded-full animate-pulse" style="height: 30px; animation-delay: 400ms;"></div>
+                    <div class="audio-bar-it w-1 bg-white rounded-full animate-pulse" style="height: 45px; animation-delay: 500ms;"></div>
+                    <div class="audio-bar-it w-1 bg-white rounded-full animate-pulse" style="height: 28px; animation-delay: 600ms;"></div>
+                    <div class="audio-bar-it w-1 bg-white rounded-full animate-pulse" style="height: 38px; animation-delay: 700ms;"></div>
+                    <div class="audio-bar-it w-1 bg-white rounded-full animate-pulse" style="height: 22px; animation-delay: 800ms;"></div>
+                  </div>
+
+                  <!-- Call Status -->
+                  <p class="text-white/90 text-sm font-medium" id="call-status-it">Connessione in corso...</p>
+
+                  <!-- End Call Button -->
+                  <button
+                    type="button"
+                    class="cursor-pointer inline-flex items-center justify-center gap-2 rounded-full bg-red-500 hover:bg-red-600 px-8 py-3 text-base font-medium text-white shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500/50"
+                    id="end-call-btn-it"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .39-.23.74-.56.9-.98.49-1.87 1.12-2.66 1.85-.18.18-.43.28-.7.28-.28 0-.53-.11-.71-.29L.29 13.08a.956.956 0 0 1-.29-.7c0-.28.11-.53.29-.71C3.34 8.78 7.46 7 12 7s8.66 1.78 11.71 4.67c.18.18.29.43.29.71 0 .28-.11.53-.29.71l-2.48 2.48c-.18.18-.43.29-.71.29-.27 0-.52-.11-.7-.28-.79-.74-1.69-1.36-2.67-1.85-.33-.16-.56-.5-.56-.9v-3.1C15.15 9.25 13.6 9 12 9z"/>
+                    </svg>
+                    <span>Termina Chiamata</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -196,3 +208,166 @@
     </div>
   </div>
 </section>
+
+<style>
+  .voice-agent-pill-it.active {
+    cursor: default !important;
+  }
+  .voice-agent-pill-it.active:hover {
+    background-color: white !important;
+  }
+
+  /* Audio visualizer animation */
+  @keyframes audioBarIt {
+    0%, 100% { transform: scaleY(0.5); }
+    50% { transform: scaleY(1); }
+  }
+
+  .audio-bar-it {
+    animation: audioBarIt 0.8s ease-in-out infinite;
+  }
+
+  #active-call-ui-it .audio-bar-it:nth-child(1) { animation-delay: 0ms; }
+  #active-call-ui-it .audio-bar-it:nth-child(2) { animation-delay: 100ms; }
+  #active-call-ui-it .audio-bar-it:nth-child(3) { animation-delay: 200ms; }
+  #active-call-ui-it .audio-bar-it:nth-child(4) { animation-delay: 300ms; }
+  #active-call-ui-it .audio-bar-it:nth-child(5) { animation-delay: 400ms; }
+  #active-call-ui-it .audio-bar-it:nth-child(6) { animation-delay: 500ms; }
+  #active-call-ui-it .audio-bar-it:nth-child(7) { animation-delay: 600ms; }
+  #active-call-ui-it .audio-bar-it:nth-child(8) { animation-delay: 700ms; }
+  #active-call-ui-it .audio-bar-it:nth-child(9) { animation-delay: 800ms; }
+</style>
+
+<script type="module">
+  import { Conversation } from 'https://unpkg.com/@11labs/client@latest/dist/index.js';
+
+  // ElevenLabs Agent Configuration
+  const AGENT_ID = 'agent_1101k6mk95q8ebst236qay0rbdp5';
+
+  // Voice IDs mapping
+  const voiceIds = {
+    ava: 'OUBnvvuqEKdDWtapoJFn',
+    ethan: 'irAl0cku0Hx4TEUJ8d1Q',
+    sophia: '4xkUqaR9MYOJHoaC1Nak',
+    liam: '2OoHspMHbpIu5oiMaqDy',
+    emma: 'QITiGyM4owEZrBEf0QV8',
+    marco: 'UgBBYS2sOqTuMpoF3BR0'
+  };
+
+  let conversationIt = null;
+  let selectedVoiceIt = 'ava';
+
+  // DOM Elements
+  const startCallBtnIt = document.getElementById('start-call-btn-it');
+  const endCallBtnIt = document.getElementById('end-call-btn-it');
+  const callButtonsIt = document.getElementById('call-buttons-it');
+  const activeCallUIIt = document.getElementById('active-call-ui-it');
+  const callStatusIt = document.getElementById('call-status-it');
+  const heroTitleIt = document.getElementById('hero-title-it');
+  const heroSubtitleIt = document.getElementById('hero-subtitle-it');
+  const voicePillsContainerIt = document.getElementById('voice-pills-container-it');
+  const pillsIt = document.querySelectorAll('.voice-agent-pill-it');
+
+  // Voice pill selection
+  pillsIt.forEach(pill => {
+    pill.addEventListener('click', function() {
+      if (conversationIt) return; // Don't allow switching during active call
+
+      pillsIt.forEach(p => {
+        p.classList.remove('active', 'bg-white', 'border-white', 'text-[#9333ea]');
+        p.classList.add('bg-white/30', 'border-transparent', 'text-black/80');
+      });
+      this.classList.remove('bg-white/30', 'border-transparent', 'text-black/80');
+      this.classList.add('active', 'bg-white', 'border-white', 'text-[#9333ea]');
+
+      selectedVoiceIt = this.dataset.agent;
+    });
+  });
+
+  // Request microphone permission
+  async function requestMicrophonePermissionIt() {
+    try {
+      await navigator.mediaDevices.getUserMedia({ audio: true });
+      return true;
+    } catch (error) {
+      console.error('Microphone permission denied:', error);
+      return false;
+    }
+  }
+
+  // Start conversation
+  async function startConversationIt() {
+    const hasPermission = await requestMicrophonePermissionIt();
+
+    if (!hasPermission) {
+      alert('L\'accesso al microfono e necessario per iniziare una chiamata vocale. Consenti l\'accesso al microfono e riprova.');
+      return;
+    }
+
+    // Update UI to active call state
+    callButtonsIt.classList.add('hidden');
+    activeCallUIIt.classList.remove('hidden');
+    activeCallUIIt.classList.add('flex');
+    voicePillsContainerIt.style.opacity = '0.5';
+    voicePillsContainerIt.style.pointerEvents = 'none';
+    heroTitleIt.textContent = `Parlando con ${selectedVoiceIt.charAt(0).toUpperCase() + selectedVoiceIt.slice(1)}`;
+    heroSubtitleIt.textContent = 'Il tuo assistente AI sta ascoltando...';
+    callStatusIt.textContent = 'Connessione in corso...';
+
+    try {
+      conversationIt = await Conversation.startSession({
+        agentId: AGENT_ID,
+        overrides: {
+          tts: {
+            voiceId: voiceIds[selectedVoiceIt]
+          }
+        },
+        onConnect: () => {
+          console.log('Connected to ElevenLabs');
+          callStatusIt.textContent = 'Connesso - Inizia a parlare!';
+        },
+        onDisconnect: () => {
+          console.log('Disconnected from ElevenLabs');
+          endConversationIt();
+        },
+        onError: (error) => {
+          console.error('Conversation error:', error);
+          callStatusIt.textContent = 'Errore di connessione. Riprova.';
+          setTimeout(() => endConversationIt(), 2000);
+        },
+        onModeChange: (mode) => {
+          if (mode.mode === 'speaking') {
+            callStatusIt.textContent = `${selectedVoiceIt.charAt(0).toUpperCase() + selectedVoiceIt.slice(1)} sta parlando...`;
+          } else if (mode.mode === 'listening') {
+            callStatusIt.textContent = 'In ascolto...';
+          }
+        }
+      });
+    } catch (error) {
+      console.error('Failed to start conversation:', error);
+      callStatusIt.textContent = 'Connessione fallita. Riprova.';
+      setTimeout(() => endConversationIt(), 2000);
+    }
+  }
+
+  // End conversation
+  async function endConversationIt() {
+    if (conversationIt) {
+      await conversationIt.endSession();
+      conversationIt = null;
+    }
+
+    // Reset UI
+    activeCallUIIt.classList.add('hidden');
+    activeCallUIIt.classList.remove('flex');
+    callButtonsIt.classList.remove('hidden');
+    voicePillsContainerIt.style.opacity = '1';
+    voicePillsContainerIt.style.pointerEvents = 'auto';
+    heroTitleIt.textContent = 'Inizia a parlare con il nostro Agente Vocale AI';
+    heroSubtitleIt.textContent = 'Consenti l\'accesso al microfono e inizia a chattare con il nostro agente vocale in tempo reale.';
+  }
+
+  // Event listeners
+  startCallBtnIt.addEventListener('click', startConversationIt);
+  endCallBtnIt.addEventListener('click', endConversationIt);
+</script>
