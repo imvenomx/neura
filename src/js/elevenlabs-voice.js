@@ -126,8 +126,10 @@ export function initElevenLabsVoice(lang = 'en', suffix = '') {
     callStatus.textContent = t.connecting;
 
     try {
-      conversation = await Conversation.startSession({
+      // Build session config - use WebRTC for more stable connection
+      const sessionConfig = {
         agentId: AGENT_ID,
+        connectionType: 'webrtc',
         overrides: {
           tts: {
             voiceId: voiceIds[selectedVoice]
@@ -147,13 +149,18 @@ export function initElevenLabsVoice(lang = 'en', suffix = '') {
           setTimeout(() => endConversation(), 2000);
         },
         onModeChange: (mode) => {
+          console.log('Mode changed:', mode);
           if (mode.mode === 'speaking') {
             callStatus.textContent = t.speaking(capitalize(selectedVoice));
           } else if (mode.mode === 'listening') {
             callStatus.textContent = t.listening;
           }
         }
-      });
+      };
+
+      console.log('Starting session with config:', sessionConfig);
+      conversation = await Conversation.startSession(sessionConfig);
+      console.log('Session started:', conversation);
     } catch (error) {
       console.error('Failed to start conversation:', error);
       callStatus.textContent = t.connectionFailed;
