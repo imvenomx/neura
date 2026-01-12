@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build && node post-build.js",
-    "build:clean": "vite build && node post-build.js",
+    "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
     "format": "prettier --write ."
   },
