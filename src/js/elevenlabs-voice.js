@@ -130,14 +130,18 @@ export function initElevenLabsVoice(lang = 'en', suffix = '') {
       const selectedVoiceId = voiceIds[selectedVoice];
       console.log('Starting conversation with voice:', selectedVoice, 'Voice ID:', selectedVoiceId);
 
-      // Build session config with voice override
+      // Build session config
+      // For Ava, use the agent's default voice (no override)
+      // For other voices, override with their voice ID
       const sessionConfig = {
         agentId: AGENT_ID,
-        overrides: {
-          tts: {
-            voiceId: selectedVoiceId
+        ...(selectedVoice !== 'ava' && {
+          overrides: {
+            tts: {
+              voiceId: selectedVoiceId
+            }
           }
-        },
+        }),
         onConnect: () => {
           console.log('Connected to ElevenLabs with voice:', selectedVoice, 'ID:', selectedVoiceId);
           callStatus.textContent = t.connected;
