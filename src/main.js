@@ -37,3 +37,16 @@ import './js/utils/force-theme-switcher';
 import './js/utils/img-before-after-slider';
 import './js/utils/leaflet';
 import './js/utils/theme-switcher';
+
+// ElevenLabs Voice Agent
+import { initElevenLabsVoice } from './js/elevenlabs-voice';
+
+// Initialize ElevenLabs based on page language
+document.addEventListener('DOMContentLoaded', () => {
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang === 'it') {
+    initElevenLabsVoice('it', '-it');
+  } else {
+    initElevenLabsVoice('en', '');
+  }
+});
