@@ -1,0 +1,203 @@
+<!-- contact section  -->
+
+<section
+  class="bg-white py-[80px] md:py-[120px]"
+  aria-labelledby="contact-heading"
+  itemscope
+  itemtype="https://schema.org/ContactPage"
+>
+  <div class="main-container">
+    <div
+      class="flex flex-col items-start justify-between gap-12 lg:flex-row lg:gap-16 xl:gap-24"
+    >
+      <!-- Left side - Italian text -->
+      <div data-ns-animate data-delay="0.1" class="w-full lg:max-w-[480px] lg:sticky lg:top-32">
+        <div class="space-y-8">
+          <!-- Main headline -->
+          <div class="space-y-4">
+            <h2
+              id="contact-heading"
+              class="text-heading-2 font-normal leading-tight"
+              itemprop="headline"
+            >
+              <span class="text-ns-linen">Inizia ora.</span><br />
+              Scala domani.
+            </h2>
+            <p class="text-tagline-1 text-secondary/80 max-w-[400px]">
+              L'AI vocale non e piu un'opzione, e l'unico modo per gestire i volumi moderni senza esplodere i costi.
+            </p>
+          </div>
+
+          <!-- Features list -->
+          <div class="space-y-4 pt-4">
+            <div class="flex items-center gap-3">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#9333ea]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9333ea]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="text-tagline-1 font-medium text-secondary">Setup rapido in 4-6 settimane</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#9333ea]/10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9333ea]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="text-tagline-1 font-medium text-secondary">Integrazione CRM Nativa & Custom</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side - Contact form -->
+      <div
+        data-ns-animate
+        data-delay="0.2"
+        class="w-full lg:max-w-[600px] bg-ns-ivory rounded-4xl p-6 md:p-8 lg:p-10 shadow-lg border border-[#9333ea]/10"
+      >
+        <div class="space-y-6">
+          <div class="space-y-2">
+            <h3 class="text-heading-5 font-normal text-secondary">Get in touch</h3>
+            <p class="text-tagline-2 text-secondary/60">Fill out the form and we'll get back to you within 24 hours.</p>
+          </div>
+
+          <form action="/index.html" method="POST" class="space-y-5">
+            <!-- Name and Last Name row -->
+            <div class="flex items-center flex-col md:flex-row gap-5 justify-between">
+              <!-- First name -->
+              <div class="space-y-2 w-full">
+                <label
+                  for="firstname"
+                  class="block text-tagline-2 text-secondary font-medium"
+                >First name</label>
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="Enter your first name"
+                  required
+                  autocomplete="given-name"
+                  class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
+                />
+              </div>
+
+              <!-- Last name -->
+              <div class="space-y-2 w-full">
+                <label
+                  for="lastname"
+                  class="block text-tagline-2 text-secondary font-medium"
+                >Last name</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Enter your last name"
+                  required
+                  autocomplete="family-name"
+                  class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
+                />
+              </div>
+            </div>
+
+            <!-- Company name and Role row -->
+            <div class="flex items-center flex-col md:flex-row gap-5 justify-between">
+              <!-- Company name -->
+              <div class="space-y-2 w-full">
+                <label
+                  for="company"
+                  class="block text-tagline-2 text-secondary font-medium"
+                >Company name</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Enter your company name"
+                  required
+                  autocomplete="organization"
+                  class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
+                />
+              </div>
+
+              <!-- Role -->
+              <div class="space-y-2 w-full">
+                <label
+                  for="role"
+                  class="block text-tagline-2 text-secondary font-medium"
+                >Role</label>
+                <input
+                  type="text"
+                  id="role"
+                  name="role"
+                  placeholder="Enter your role"
+                  required
+                  autocomplete="organization-title"
+                  class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
+                />
+              </div>
+            </div>
+
+            <!-- Phone number -->
+            <div class="space-y-2">
+              <label
+                for="phone"
+                class="block text-tagline-2 text-secondary font-medium"
+              >Phone number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+                autocomplete="tel"
+                class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="space-y-2">
+              <label
+                for="email"
+                class="block text-tagline-2 text-secondary font-medium"
+              >Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+                autocomplete="email"
+                class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
+              />
+            </div>
+
+            <!-- terms checkbox -->
+            <fieldset class="flex items-center gap-2">
+              <label for="terms" class="flex items-center gap-x-3">
+                <input id="terms" type="checkbox" class="sr-only peer" required />
+                <span
+                  class="size-4 rounded-full border border-stroke-3 relative after:absolute after:size-2.5 after:bg-[#9333ea] after:rounded-full after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-0 peer-checked:after:opacity-100 peer-checked:border-[#9333ea] cursor-pointer transition-colors"
+                ></span>
+              </label>
+              <label
+                for="terms"
+                class="text-tagline-3 cursor-pointer text-secondary/60"
+              >
+                I agree with the
+                <a href="#" class="text-[#9333ea] underline text-tagline-3">terms and conditions</a>
+              </label>
+            </fieldset>
+
+            <!-- submit button -->
+            <button
+              type="submit"
+              class="w-full rounded-full bg-gradient-to-r from-[#7B3FE4] via-[#C23DBE] to-[#F06A3A] px-8 py-4 text-base font-medium text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#9333ea]/50"
+            >
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

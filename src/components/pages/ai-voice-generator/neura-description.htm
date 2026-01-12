@@ -1,0 +1,147 @@
+<!-- =========================
+Neura Description Section
+===========================-->
+<section id="about" class="bg-white py-[60px] md:py-[80px] lg:py-[100px]">
+  <div class="main-container">
+    <div class="max-w-[1100px] mx-auto text-center">
+      <!-- Title and badge -->
+      <div class="mb-10" data-ns-animate data-delay="0.1">
+        <span class="badge badge-ivory mb-4">Chi Siamo</span>
+        <h2 class="text-heading-3 md:text-heading-2 text-secondary">What's <span class="text-ns-linen">Neura</span></h2>
+      </div>
+      <div class="neura-description-container">
+        <p class="neura-description text-xl md:text-2xl lg:text-3xl leading-[1.7] md:leading-[1.8] font-semibold text-secondary/20">
+          <span class="reveal-word">Neura</span>
+          <span class="reveal-word">is</span>
+          <span class="reveal-word">your</span>
+          <span class="reveal-word">intelligent</span>
+          <span class="reveal-word">AI</span>
+          <span class="reveal-word">voice</span>
+          <span class="reveal-word">assistant</span>
+          <span class="reveal-word">designed</span>
+          <span class="reveal-word">to</span>
+          <span class="reveal-word">transform</span>
+          <span class="reveal-word">how</span>
+          <span class="reveal-word">your</span>
+          <span class="reveal-word">team</span>
+          <span class="reveal-word">works.</span>
+          <span class="reveal-word">Built</span>
+          <span class="reveal-word">with</span>
+          <span class="reveal-word">advanced</span>
+          <span class="reveal-word">natural</span>
+          <span class="reveal-word">language</span>
+          <span class="reveal-word">processing,</span>
+          <span class="reveal-word">Neura</span>
+          <span class="reveal-word">understands</span>
+          <span class="reveal-word">context,</span>
+          <span class="reveal-word">handles</span>
+          <span class="reveal-word">complex</span>
+          <span class="reveal-word">requests,</span>
+          <span class="reveal-word">and</span>
+          <span class="reveal-word">connects</span>
+          <span class="reveal-word">seamlessly</span>
+          <span class="reveal-word">to</span>
+          <span class="reveal-word">your</span>
+          <span class="reveal-word">business</span>
+          <span class="reveal-word">systems.</span>
+          <span class="reveal-word">From</span>
+          <span class="reveal-word">scheduling</span>
+          <span class="reveal-word">appointments</span>
+          <span class="reveal-word">to</span>
+          <span class="reveal-word">querying</span>
+          <span class="reveal-word">databases,</span>
+          <span class="reveal-word">Neura</span>
+          <span class="reveal-word">empowers</span>
+          <span class="reveal-word">your</span>
+          <span class="reveal-word">employees</span>
+          <span class="reveal-word">to</span>
+          <span class="reveal-word">get</span>
+          <span class="reveal-word">answers</span>
+          <span class="reveal-word">instantly</span>
+          <span class="reveal-word">through</span>
+          <span class="reveal-word">natural</span>
+          <span class="reveal-word">conversation.</span>
+          <span class="reveal-word">Available</span>
+          <span class="reveal-word">24/7,</span>
+          <span class="reveal-word">Neura</span>
+          <span class="reveal-word">never</span>
+          <span class="reveal-word">sleeps,</span>
+          <span class="reveal-word">ensuring</span>
+          <span class="reveal-word">your</span>
+          <span class="reveal-word">business</span>
+          <span class="reveal-word">runs</span>
+          <span class="reveal-word">smoothly</span>
+          <span class="reveal-word">around</span>
+          <span class="reveal-word">the</span>
+          <span class="reveal-word">clock.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .reveal-word {
+    display: inline-block;
+    transition: color 0.4s ease;
+    margin-right: 0.2em;
+  }
+
+  .reveal-word.revealed {
+    color: #1e293b;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.neura-description-container');
+    const words = document.querySelectorAll('.reveal-word');
+    let lastScrollY = 0;
+    let revealedCount = 0;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          window.addEventListener('scroll', handleScroll);
+          handleScroll(); // Initial check
+        } else {
+          window.removeEventListener('scroll', handleScroll);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    if (container) {
+      observer.observe(container);
+    }
+
+    function handleScroll() {
+      const rect = container.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const containerTop = rect.top;
+      const containerHeight = rect.height;
+
+      // Calculate progress based on scroll position
+      // Start revealing when container enters viewport, complete when it's centered
+      const startPoint = windowHeight;
+      const endPoint = windowHeight * 0.3;
+      const currentPoint = containerTop;
+
+      let progress = 1 - ((currentPoint - endPoint) / (startPoint - endPoint));
+      progress = Math.max(0, Math.min(1, progress));
+
+      const targetCount = Math.floor(progress * words.length);
+
+      words.forEach((word, index) => {
+        if (index < targetCount) {
+          word.classList.add('revealed');
+        } else {
+          word.classList.remove('revealed');
+        }
+      });
+
+      revealedCount = targetCount;
+    }
+  });
+</script>

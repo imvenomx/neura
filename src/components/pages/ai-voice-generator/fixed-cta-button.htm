@@ -1,0 +1,54 @@
+<!-- =========================
+Fixed CTA Button - Appears on scroll
+===========================-->
+<div id="fixed-cta-btn" class="fixed z-50 opacity-0 pointer-events-none transition-all duration-500" style="bottom: 25px; left: 50%; transform: translateX(-50%) translateY(20px);">
+  <a
+    href="#contact"
+    class="inline-flex items-center justify-center gap-2 rounded-full bg-[#9333ea] px-6 py-3.5 text-base font-semibold text-white transition-all hover:scale-105 focus:outline-none whitespace-nowrap"
+    style="box-shadow: 0 0 20px rgba(147, 51, 234, 0.6), 0 0 40px rgba(147, 51, 234, 0.4), 0 0 60px rgba(147, 51, 234, 0.2), 0 4px 20px rgba(0, 0, 0, 0.15);"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+    <span>Book a Free Call Now</span>
+  </a>
+</div>
+
+<style>
+  #fixed-cta-btn.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) !important;
+    pointer-events: auto;
+  }
+
+  #fixed-cta-btn a:hover {
+    box-shadow: 0 0 30px rgba(147, 51, 234, 0.8), 0 0 60px rgba(147, 51, 234, 0.5), 0 0 90px rgba(147, 51, 234, 0.3), 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const fixedBtn = document.getElementById('fixed-cta-btn');
+    const heroSection = document.querySelector('section[role="banner"]');
+    const footer = document.querySelector('footer');
+
+    if (fixedBtn && heroSection && footer) {
+      window.addEventListener('scroll', function() {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        const footerTop = footer.offsetTop;
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        // Show after hero, hide when footer is visible
+        const pastHero = scrollY > heroBottom - 200;
+        const beforeFooter = (scrollY + windowHeight) < footerTop + 100;
+
+        if (pastHero && beforeFooter) {
+          fixedBtn.classList.add('visible');
+        } else {
+          fixedBtn.classList.remove('visible');
+        }
+      });
+    }
+  });
+</script>

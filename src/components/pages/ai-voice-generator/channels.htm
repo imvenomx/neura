@@ -1,0 +1,421 @@
+<!-- =========================
+Channels section
+===========================-->
+<section id="channels" class="bg-white py-[80px] md:py-[120px]">
+  <div class="main-container">
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+
+      <!-- Left side - Chat/Email mockup -->
+      <div
+        data-ns-animate
+        data-delay="0.2"
+        class="w-full lg:w-1/2 max-w-[500px]"
+      >
+        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-6 md:p-8">
+          <!-- Channel tabs - Only Voice and Email -->
+          <div class="flex items-center justify-center gap-8 mb-8">
+            <button class="channel-tab-btn active flex flex-col items-center gap-2 p-3 rounded-xl transition-all cursor-pointer" data-channel="voice">
+              <div class="channel-icon w-12 h-12 rounded-full bg-[#9333ea] flex items-center justify-center transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </div>
+              <span class="text-sm font-medium text-[#9333ea]">Voice</span>
+            </button>
+            <button class="channel-tab-btn flex flex-col items-center gap-2 p-3 rounded-xl transition-all cursor-pointer" data-channel="email">
+              <div class="channel-icon w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary/60" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+              <span class="text-sm font-medium text-secondary/60">Email</span>
+            </button>
+          </div>
+
+          <!-- Voice Channel Content -->
+          <div class="channel-content voice-content">
+            <!-- Call header -->
+            <div class="text-center pb-4 border-b border-gray-100">
+              <div class="phone-pulse-container w-16 h-16 rounded-full bg-[#9333ea]/10 flex items-center justify-center mx-auto mb-3 relative">
+                <!-- Pulsing rings -->
+                <div class="pulse-ring pulse-ring-1"></div>
+                <div class="pulse-ring pulse-ring-2"></div>
+                <div class="pulse-ring pulse-ring-3"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#9333ea] relative z-10 phone-shake" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </div>
+              <h4 class="text-lg font-semibold text-secondary">Incoming Call</h4>
+              <p class="text-sm text-secondary/60">Employee - Marco Bianchi</p>
+            </div>
+
+            <!-- Animated Chat Messages -->
+            <div class="chat-messages-container pt-4 min-h-[280px]">
+              <!-- Message 1 slot -->
+              <div class="message-slot slot-1 mb-3">
+                <!-- Typing indicator 1 -->
+                <div class="typing-indicator typing-1 hidden">
+                  <p class="text-xs text-[#9333ea] font-medium mb-1">Neura is typing...</p>
+                  <div class="bg-[#9333ea]/10 rounded-2xl rounded-tl-none p-4 inline-flex gap-1">
+                    <span class="typing-dot w-2 h-2 bg-[#9333ea]/60 rounded-full"></span>
+                    <span class="typing-dot w-2 h-2 bg-[#9333ea]/60 rounded-full"></span>
+                    <span class="typing-dot w-2 h-2 bg-[#9333ea]/60 rounded-full"></span>
+                  </div>
+                </div>
+                <!-- Message 1 - Agent greeting -->
+                <div class="chat-message msg-1 hidden">
+                  <p class="text-xs text-[#9333ea] font-medium mb-1">Neura</p>
+                  <div class="bg-[#9333ea]/10 rounded-2xl rounded-tl-none p-4 max-w-[90%]">
+                    <p class="text-sm text-secondary">Hello, I'm Neura, the AI assistant. How can I help you today?</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message 2 slot -->
+              <div class="message-slot slot-2 mb-3 hidden">
+                <!-- Typing indicator 2 -->
+                <div class="typing-indicator typing-2 hidden">
+                  <div class="flex flex-col items-end">
+                    <p class="text-xs text-secondary/60 font-medium mb-1">Marco is typing...</p>
+                    <div class="bg-gray-100 rounded-2xl rounded-tr-none p-4 inline-flex gap-1">
+                      <span class="typing-dot w-2 h-2 bg-secondary/40 rounded-full"></span>
+                      <span class="typing-dot w-2 h-2 bg-secondary/40 rounded-full"></span>
+                      <span class="typing-dot w-2 h-2 bg-secondary/40 rounded-full"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Message 2 - User request -->
+                <div class="chat-message msg-2 hidden">
+                  <div class="flex flex-col items-end">
+                    <p class="text-xs text-secondary/60 font-medium mb-1">Employee - Marco Bianchi</p>
+                    <div class="bg-gray-100 rounded-2xl rounded-tr-none p-4 max-w-[90%]">
+                      <p class="text-sm text-secondary">Hi, I'd like to book a meeting with Mattia on Tuesday.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message 3 slot -->
+              <div class="message-slot slot-3 hidden">
+                <!-- Typing indicator 3 -->
+                <div class="typing-indicator typing-3 hidden">
+                  <p class="text-xs text-[#9333ea] font-medium mb-1">Neura is typing...</p>
+                  <div class="bg-[#9333ea]/10 rounded-2xl rounded-tl-none p-4 inline-flex gap-1">
+                    <span class="typing-dot w-2 h-2 bg-[#9333ea]/60 rounded-full"></span>
+                    <span class="typing-dot w-2 h-2 bg-[#9333ea]/60 rounded-full"></span>
+                    <span class="typing-dot w-2 h-2 bg-[#9333ea]/60 rounded-full"></span>
+                  </div>
+                </div>
+                <!-- Message 3 - Agent response -->
+                <div class="chat-message msg-3 hidden">
+                  <p class="text-xs text-[#9333ea] font-medium mb-1">Neura</p>
+                  <div class="bg-[#9333ea]/10 rounded-2xl rounded-tl-none p-4 max-w-[90%]">
+                    <p class="text-sm text-secondary">Perfect! I've scheduled your meeting with Mattia for Tuesday at 10:00 AM. You'll receive a confirmation email shortly.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Channel Content (hidden by default) -->
+          <div class="channel-content email-content hidden">
+            <!-- Email mockup -->
+            <div class="space-y-4">
+              <!-- Email header -->
+              <div class="flex items-start gap-4 pb-4 border-b border-gray-100">
+                <div class="w-12 h-12 rounded-xl bg-[#9333ea]/10 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#9333ea]" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-secondary">Appointment Confirmation</h4>
+                  <p class="text-xs text-secondary/60">Neura <span class="text-secondary/40">→</span> Marco Bianchi</p>
+                </div>
+              </div>
+
+              <!-- Email body -->
+              <div class="space-y-4 text-sm text-secondary">
+                <p>Hello Marco,</p>
+                <p>Your appointment with Mattia is set on:</p>
+
+                <div class="space-y-2 pl-4 border-l-2 border-[#9333ea]/20">
+                  <p><span class="text-secondary/60">- Date:</span> <strong>Tuesday, January 14, 2025</strong></p>
+                  <p><span class="text-secondary/60">- Time:</span> <strong>10:00 - 11:00</strong></p>
+                  <p><span class="text-secondary/60">- Duration:</span> <strong>60 minutes</strong></p>
+                  <p><span class="text-secondary/60">- With:</span> <strong>Mattia</strong></p>
+                  <p><span class="text-secondary/60">- Location:</span> <strong>Meeting Room A</strong></p>
+                </div>
+
+                <!-- Note -->
+                <div class="bg-[#9333ea]/5 rounded-xl p-4 flex items-start gap-3 mt-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9333ea] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                  </svg>
+                  <p class="text-xs text-secondary/70">Please arrive 5 minutes early. If you need to reschedule, simply call or reply to this email.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side - Content -->
+      <div
+        data-ns-animate
+        data-delay="0.3"
+        class="w-full lg:w-1/2 space-y-8"
+      >
+        <div class="space-y-4">
+          <span class="text-[#9333ea] text-sm font-medium tracking-wider">[ The channels ]</span>
+          <h2 class="text-4xl md:text-5xl font-normal leading-tight">
+            In what <span class="font-semibold">channels</span><br/>
+            you can use <span class="font-semibold text-[#9333ea]">Neura?</span>
+          </h2>
+        </div>
+
+        <!-- Channel list - Only Voice and Email -->
+        <div class="space-y-6 pt-4">
+          <!-- Voice -->
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#9333ea]/10 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#9333ea]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-secondary">VOICE</h3>
+              <p class="text-secondary/60">Neura answers and makes calls, handles inquiries, books appointments, and checks your database in real-time.</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-secondary">E-MAIL</h3>
+              <p class="text-secondary/60">Neura automatically sends confirmation emails, reminders, and follow-ups after appointments are booked.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Typing animation */
+  @keyframes bounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-4px); }
+  }
+  .typing-dot {
+    animation: bounce 1s infinite;
+  }
+  .typing-dot:nth-child(2) {
+    animation-delay: 150ms;
+  }
+  .typing-dot:nth-child(3) {
+    animation-delay: 300ms;
+  }
+
+  /* Chat message fade in */
+  .chat-message, .typing-indicator {
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  /* Phone pulse animation */
+  .phone-pulse-container {
+    position: relative;
+  }
+
+  .pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #9333ea, #c23dbe, #f06a3a) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: pulse-ring 2s ease-out infinite;
+    opacity: 0;
+  }
+
+  .pulse-ring-1 {
+    animation-delay: 0s;
+  }
+  .pulse-ring-2 {
+    animation-delay: 0.6s;
+  }
+  .pulse-ring-3 {
+    animation-delay: 1.2s;
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+    }
+    100% {
+      width: 180%;
+      height: 180%;
+      opacity: 0;
+    }
+  }
+
+  /* Phone shake animation */
+  .phone-shake {
+    animation: phone-shake 0.5s ease-in-out infinite;
+  }
+
+  @keyframes phone-shake {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(-8deg); }
+    20% { transform: rotate(8deg); }
+    30% { transform: rotate(-8deg); }
+    40% { transform: rotate(8deg); }
+    50%, 100% { transform: rotate(0deg); }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Channel tab switching
+    const tabBtns = document.querySelectorAll('.channel-tab-btn');
+    const voiceContent = document.querySelector('.voice-content');
+    const emailContent = document.querySelector('.email-content');
+    let animationStarted = false;
+    let animationTimeouts = [];
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const channel = this.dataset.channel;
+
+        // Update active states
+        tabBtns.forEach(b => {
+          b.classList.remove('active');
+          b.querySelector('.channel-icon').classList.remove('bg-[#9333ea]');
+          b.querySelector('.channel-icon').classList.add('bg-gray-100');
+          b.querySelector('span:last-child').classList.remove('text-[#9333ea]');
+          b.querySelector('span:last-child').classList.add('text-secondary/60');
+          b.querySelector('svg').classList.remove('text-white');
+          b.querySelector('svg').classList.add('text-secondary/60');
+        });
+
+        this.classList.add('active');
+        this.querySelector('.channel-icon').classList.remove('bg-gray-100');
+        this.querySelector('.channel-icon').classList.add('bg-[#9333ea]');
+        this.querySelector('span:last-child').classList.remove('text-secondary/60');
+        this.querySelector('span:last-child').classList.add('text-[#9333ea]');
+        this.querySelector('svg').classList.remove('text-secondary/60');
+        this.querySelector('svg').classList.add('text-white');
+
+        // Show/hide content
+        if (channel === 'voice') {
+          voiceContent.classList.remove('hidden');
+          emailContent.classList.add('hidden');
+          resetAndStartAnimation();
+        } else {
+          voiceContent.classList.add('hidden');
+          emailContent.classList.remove('hidden');
+        }
+      });
+    });
+
+    function resetAndStartAnimation() {
+      // Clear any existing timeouts
+      animationTimeouts.forEach(t => clearTimeout(t));
+      animationTimeouts = [];
+
+      // Reset all elements
+      const slots = document.querySelectorAll('.message-slot');
+      const typings = document.querySelectorAll('.typing-indicator');
+      const msgs = document.querySelectorAll('.chat-message');
+
+      slots.forEach(s => s.classList.add('hidden'));
+      typings.forEach(t => t.classList.add('hidden'));
+      msgs.forEach(m => m.classList.add('hidden'));
+
+      // Start animation
+      startChatAnimation();
+    }
+
+    // Chat animation with typing for all messages
+    function startChatAnimation() {
+      const slot1 = document.querySelector('.slot-1');
+      const slot2 = document.querySelector('.slot-2');
+      const slot3 = document.querySelector('.slot-3');
+      const typing1 = document.querySelector('.typing-1');
+      const typing2 = document.querySelector('.typing-2');
+      const typing3 = document.querySelector('.typing-3');
+      const msg1 = document.querySelector('.msg-1');
+      const msg2 = document.querySelector('.msg-2');
+      const msg3 = document.querySelector('.msg-3');
+
+      // Step 1: Show slot 1 with typing indicator
+      animationTimeouts.push(setTimeout(() => {
+        slot1.classList.remove('hidden');
+        typing1.classList.remove('hidden');
+      }, 500));
+
+      // Step 2: Hide typing 1, show message 1
+      animationTimeouts.push(setTimeout(() => {
+        typing1.classList.add('hidden');
+        msg1.classList.remove('hidden');
+      }, 1800));
+
+      // Step 3: Show slot 2 with typing indicator
+      animationTimeouts.push(setTimeout(() => {
+        slot2.classList.remove('hidden');
+        typing2.classList.remove('hidden');
+      }, 2500));
+
+      // Step 4: Hide typing 2, show message 2
+      animationTimeouts.push(setTimeout(() => {
+        typing2.classList.add('hidden');
+        msg2.classList.remove('hidden');
+      }, 4000));
+
+      // Step 5: Show slot 3 with typing indicator
+      animationTimeouts.push(setTimeout(() => {
+        slot3.classList.remove('hidden');
+        typing3.classList.remove('hidden');
+      }, 4800));
+
+      // Step 6: Hide typing 3, show message 3
+      animationTimeouts.push(setTimeout(() => {
+        typing3.classList.add('hidden');
+        msg3.classList.remove('hidden');
+      }, 6500));
+    }
+
+    // Use Intersection Observer to start animation when section is visible
+    const channelsSection = document.getElementById('channels');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !animationStarted) {
+          animationStarted = true;
+          resetAndStartAnimation();
+        }
+      });
+    }, {
+      threshold: 0.3 // Trigger when 30% of section is visible
+    });
+
+    if (channelsSection) {
+      observer.observe(channelsSection);
+    }
+  });
+</script>

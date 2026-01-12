@@ -1,0 +1,160 @@
+<!-- =========================
+Neura Description Section - Italian
+===========================-->
+<section id="about" class="bg-white py-[60px] md:py-[80px] lg:py-[100px]">
+  <div class="main-container">
+    <div class="max-w-[1100px] mx-auto text-center">
+      <!-- Title and badge -->
+      <div class="mb-10" data-ns-animate data-delay="0.1">
+        <span class="badge badge-ivory mb-4">Chi Siamo</span>
+        <h2 class="text-heading-3 md:text-heading-2 text-secondary">Cos'e <span class="text-ns-linen">Neura</span></h2>
+      </div>
+      <div class="neura-description-container">
+        <p class="neura-description text-xl md:text-2xl lg:text-3xl leading-[1.7] md:leading-[1.8] font-semibold text-secondary/20">
+          <span class="reveal-word">Neura</span>
+          <span class="reveal-word">e</span>
+          <span class="reveal-word">il</span>
+          <span class="reveal-word">tuo</span>
+          <span class="reveal-word">assistente</span>
+          <span class="reveal-word">vocale</span>
+          <span class="reveal-word">AI</span>
+          <span class="reveal-word">intelligente,</span>
+          <span class="reveal-word">progettato</span>
+          <span class="reveal-word">per</span>
+          <span class="reveal-word">trasformare</span>
+          <span class="reveal-word">il</span>
+          <span class="reveal-word">modo</span>
+          <span class="reveal-word">in</span>
+          <span class="reveal-word">cui</span>
+          <span class="reveal-word">lavora</span>
+          <span class="reveal-word">il</span>
+          <span class="reveal-word">tuo</span>
+          <span class="reveal-word">team.</span>
+          <span class="reveal-word">Costruito</span>
+          <span class="reveal-word">con</span>
+          <span class="reveal-word">elaborazione</span>
+          <span class="reveal-word">avanzata</span>
+          <span class="reveal-word">del</span>
+          <span class="reveal-word">linguaggio</span>
+          <span class="reveal-word">naturale,</span>
+          <span class="reveal-word">Neura</span>
+          <span class="reveal-word">comprende</span>
+          <span class="reveal-word">il</span>
+          <span class="reveal-word">contesto,</span>
+          <span class="reveal-word">gestisce</span>
+          <span class="reveal-word">richieste</span>
+          <span class="reveal-word">complesse</span>
+          <span class="reveal-word">e</span>
+          <span class="reveal-word">si</span>
+          <span class="reveal-word">connette</span>
+          <span class="reveal-word">perfettamente</span>
+          <span class="reveal-word">ai</span>
+          <span class="reveal-word">tuoi</span>
+          <span class="reveal-word">sistemi</span>
+          <span class="reveal-word">aziendali.</span>
+          <span class="reveal-word">Dalla</span>
+          <span class="reveal-word">pianificazione</span>
+          <span class="reveal-word">degli</span>
+          <span class="reveal-word">appuntamenti</span>
+          <span class="reveal-word">all'interrogazione</span>
+          <span class="reveal-word">dei</span>
+          <span class="reveal-word">database,</span>
+          <span class="reveal-word">Neura</span>
+          <span class="reveal-word">permette</span>
+          <span class="reveal-word">ai</span>
+          <span class="reveal-word">tuoi</span>
+          <span class="reveal-word">dipendenti</span>
+          <span class="reveal-word">di</span>
+          <span class="reveal-word">ottenere</span>
+          <span class="reveal-word">risposte</span>
+          <span class="reveal-word">istantanee</span>
+          <span class="reveal-word">attraverso</span>
+          <span class="reveal-word">conversazioni</span>
+          <span class="reveal-word">naturali.</span>
+          <span class="reveal-word">Disponibile</span>
+          <span class="reveal-word">24/7,</span>
+          <span class="reveal-word">Neura</span>
+          <span class="reveal-word">non</span>
+          <span class="reveal-word">dorme</span>
+          <span class="reveal-word">mai,</span>
+          <span class="reveal-word">garantendo</span>
+          <span class="reveal-word">che</span>
+          <span class="reveal-word">la</span>
+          <span class="reveal-word">tua</span>
+          <span class="reveal-word">azienda</span>
+          <span class="reveal-word">funzioni</span>
+          <span class="reveal-word">senza</span>
+          <span class="reveal-word">intoppi</span>
+          <span class="reveal-word">24</span>
+          <span class="reveal-word">ore</span>
+          <span class="reveal-word">su</span>
+          <span class="reveal-word">24.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .reveal-word {
+    display: inline-block;
+    transition: color 0.4s ease;
+    margin-right: 0.2em;
+  }
+
+  .reveal-word.revealed {
+    color: #1e293b;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.neura-description-container');
+    const words = document.querySelectorAll('.reveal-word');
+    let lastScrollY = 0;
+    let revealedCount = 0;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          window.addEventListener('scroll', handleScroll);
+          handleScroll();
+        } else {
+          window.removeEventListener('scroll', handleScroll);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    if (container) {
+      observer.observe(container);
+    }
+
+    function handleScroll() {
+      const rect = container.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const containerTop = rect.top;
+      const containerHeight = rect.height;
+
+      const startPoint = windowHeight;
+      const endPoint = windowHeight * 0.3;
+      const currentPoint = containerTop;
+
+      let progress = 1 - ((currentPoint - endPoint) / (startPoint - endPoint));
+      progress = Math.max(0, Math.min(1, progress));
+
+      const targetCount = Math.floor(progress * words.length);
+
+      words.forEach((word, index) => {
+        if (index < targetCount) {
+          word.classList.add('revealed');
+        } else {
+          word.classList.remove('revealed');
+        }
+      });
+
+      revealedCount = targetCount;
+    }
+  });
+</script>

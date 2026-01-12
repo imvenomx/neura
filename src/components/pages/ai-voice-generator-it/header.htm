@@ -1,0 +1,116 @@
+<!-- =========================
+Header - Italian
+===========================-->
+<style>
+  .ai-voice-header.scroll-ai-voice-header {
+    background: color-mix(in oklab, #efeff2 80%, transparent) !important;
+  }
+  .ai-voice-header.scroll-ai-voice-header .nav-link {
+    color: #1e293b !important;
+  }
+  .ai-voice-header.scroll-ai-voice-header .nav-link:hover {
+    color: #9333ea !important;
+  }
+  .ai-voice-header .logo-white {
+    display: block;
+  }
+  .ai-voice-header .logo-black {
+    display: none;
+  }
+  .ai-voice-header.scroll-ai-voice-header .logo-white {
+    display: none;
+  }
+  .ai-voice-header.scroll-ai-voice-header .logo-black {
+    display: block;
+  }
+</style>
+<header>
+  <div
+    class="ai-voice-header lp:!max-w-[1290px] bg-accent/10 has-top-nav {=$class} fixed top-15 left-1/2 z-50 mx-auto flex w-full max-w-[350px] -translate-x-1/2 items-center justify-between rounded-full px-2.5 py-2.5 opacity-0 backdrop-blur-[15px] max-[400px]:max-w-[350px] min-[425px]:max-w-[375px] min-[500px]:max-w-[450px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xl:py-0"
+    data-ns-animate
+    data-direction="up"
+    data-offset="100"
+  >
+    <div>
+      <a href="/it/">
+        <span class="sr-only">Home</span>
+        <figure class="max-w-[120px] lg:max-w-[150px]">
+          <img src="/images/logowhite.png" alt="Neura" class="w-full logo-white" />
+          <img src="/images/logoblack.png" alt="Neura" class="w-full logo-black" />
+        </figure>
+      </a>
+    </div>
+    <nav class="hidden items-center xl:flex">
+      <ul class="flex items-center">
+        <li class="nav-item relative cursor-pointer py-2.5">
+          <a
+            href="#about"
+            class="lenis-scroll-to nav-link text-tagline-1 text-accent/80 flex items-center gap-1 rounded-full px-4 py-2 font-normal transition-all duration-400"
+          >
+            <span>Chi Siamo</span>
+          </a>
+        </li>
+        <li class="nav-item relative cursor-pointer py-2.5">
+          <a
+            href="#how-it-works"
+            class="lenis-scroll-to nav-link text-tagline-1 text-accent/80 flex items-center gap-1 rounded-full px-4 py-2 font-normal transition-all duration-400"
+          >
+            <span>Come Funziona</span>
+          </a>
+        </li>
+        <li class="nav-item relative cursor-pointer py-2.5">
+          <a
+            href="#features"
+            class="lenis-scroll-to nav-link text-tagline-1 text-accent/80 flex items-center gap-1 rounded-full px-4 py-2 font-normal transition-all duration-400"
+          >
+            <span>Funzionalita</span>
+          </a>
+        </li>
+        <li class="nav-item relative cursor-pointer py-2.5">
+          <a
+            href="#industries"
+            class="lenis-scroll-to nav-link text-tagline-1 text-accent/80 flex items-center gap-1 rounded-full px-4 py-2 font-normal transition-all duration-400"
+          >
+            <span>Settori</span>
+          </a>
+        </li>
+        <li class="nav-item relative cursor-pointer py-2.5">
+          <a
+            href="#integrations"
+            class="lenis-scroll-to nav-link text-tagline-1 text-accent/80 flex items-center gap-1 rounded-full px-4 py-2 font-normal transition-all duration-400"
+          >
+            <span>Integrazioni</span>
+          </a>
+        </li>
+        <li class="nav-item relative cursor-pointer py-2.5">
+          <a
+            href="#contact"
+            class="lenis-scroll-to nav-link text-tagline-1 text-accent/80 flex items-center gap-1 rounded-full px-4 py-2 font-normal transition-all duration-400"
+          >
+            <span>Contatti</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hidden items-center justify-center xl:flex">
+      <a
+        href="#contact"
+        class="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-medium text-secondary transition-all hover:bg-gradient-to-r hover:from-[#7B3FE4] hover:via-[#C23DBE] hover:to-[#F06A3A] hover:text-white"
+      >
+        Inizia Ora
+      </a>
+    </div>
+    <div class="block xl:hidden">
+      <button
+        class="nav-hamburger bg-background-4 dark:bg-background-6 flex size-12 cursor-pointer flex-col items-center justify-center gap-[5px] rounded-full"
+      >
+        <span class="sr-only">Menu</span>
+        <span class="bg-stroke-9 dark:bg-stroke-1 block h-0.5 w-6"></span>
+        <span class="bg-stroke-9 dark:bg-stroke-1 block h-0.5 w-6"></span>
+        <span class="bg-stroke-9 dark:bg-stroke-1 block h-0.5 w-6"></span>
+      </button>
+    </div>
+  </div>
+  <Component src="src/components/pages/ai-voice-generator-it/mobile-menu.htm" />
+</header>

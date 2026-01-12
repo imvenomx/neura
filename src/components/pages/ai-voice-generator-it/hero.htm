@@ -1,0 +1,198 @@
+<!-- hero section - Italian -->
+<section
+  class="lp:pt-[180px] relative overflow-hidden pt-[120px] pb-12 lg:pb-24"
+  role="banner"
+  aria-label="Sezione Hero Agente Vocale AI"
+  itemscope
+  itemtype="https://schema.org/WebPage"
+>
+  <!-- Image Background -->
+  <img
+    src="/images/hero-gradients-01.png"
+    alt="Sfondo decorativo con gradiente"
+    class="lp:!h-[960px] absolute top-0 left-0 z-[-1] h-[100%] w-full object-cover object-center md:h-[650px] lg:h-[700px]"
+    aria-hidden="true"
+  />
+
+  <div class="main-container relative z-10">
+    <div class="lp:space-y-34 space-y-10 md:space-y-15">
+      <!-- content  -->
+      <div class="mx-auto space-y-10 text-center lg:space-y-14">
+        <!-- text groups -->
+        <div class="space-y-3 text-center">
+          <!-- badge and text -->
+          <div class="space-y-5">
+            <!-- main text  -->
+            <h1
+              data-ns-animate
+              data-instant
+              data-delay="0.2"
+              class="text-accent lg:text-heading-1 text-heading-3 mx-auto max-w-[350px] leading-[110%] lg:max-w-[650px]"
+              itemprop="headline"
+            >
+              Il Tuo Assistente AI, a Una Chiamata di Distanza.
+            </h1>
+          </div>
+          <p
+            data-ns-animate
+            data-instant
+            data-delay="0.3"
+            class="text-accent/80 mx-auto max-w-[580px]"
+            itemprop="description"
+            aria-label="Descrizione Agente Vocale AI"
+          >
+            Potenzia i tuoi dipendenti con agenti vocali AI. Prenota appuntamenti, controlla calendari,
+            cerca sul web, interroga inventario, fatturato o qualsiasi cosa ti serva —
+            tutto attraverso una conversazione naturale.
+          </p>
+        </div>
+
+        <!-- Voice Agent Selector Card -->
+        <div
+          data-ns-animate
+          data-instant
+          data-delay="0.35"
+          class="mx-auto w-full max-w-[920px]"
+        >
+          <div class="voice-agent-card relative overflow-hidden rounded-3xl">
+            <!-- Glass card inner -->
+            <div class="relative rounded-3xl border border-white/30 bg-white/20 backdrop-blur-2xl p-6 md:p-8">
+              <!-- Gradient background blob -->
+              <div class="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
+                <div class="absolute -bottom-20 left-1/2 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-gradient-to-r from-[#8B3CF6]/50 via-[#E44C9A]/50 via-[#F28C45]/50 to-[#3B82F6]/50 blur-3xl"></div>
+              </div>
+
+              <!-- Content -->
+              <div class="relative z-10 space-y-6">
+                <!-- Title -->
+                <div class="space-y-2 text-center">
+                  <h2 class="text-white text-xl font-semibold md:text-2xl">
+                    Inizia a parlare con il nostro Agente Vocale AI
+                  </h2>
+                  <p class="text-white/70 text-base">
+                    Consenti l'accesso al microfono e inizia a chattare con il nostro agente vocale in tempo reale.
+                  </p>
+                </div>
+
+                <!-- Voice Agent Selection Pills -->
+                <div class="inline-flex w-full justify-center">
+                  <div class="agent-pills-container flex flex-wrap items-center justify-center gap-2 rounded-[40px] bg-white/20 backdrop-blur-[20px] px-4 py-3 lg:flex-nowrap" aria-label="Seleziona agente vocale">
+                    <button
+                      type="button"
+                      class="voice-agent-pill active rounded-full border border-white bg-white px-4 py-1.5 text-sm font-medium text-[#9333ea] transition-all focus:outline-none cursor-default"
+                      data-agent="ava"
+                    >
+                      Ava
+                    </button>
+                    <button
+                      type="button"
+                      class="voice-agent-pill rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
+                      data-agent="ethan"
+                    >
+                      Ethan
+                    </button>
+                    <button
+                      type="button"
+                      class="voice-agent-pill rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
+                      data-agent="sophia"
+                    >
+                      Sophia
+                    </button>
+                    <button
+                      type="button"
+                      class="voice-agent-pill rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
+                      data-agent="liam"
+                    >
+                      Liam
+                    </button>
+                    <button
+                      type="button"
+                      class="voice-agent-pill rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
+                      data-agent="emma"
+                    >
+                      Emma
+                    </button>
+                    <button
+                      type="button"
+                      class="voice-agent-pill rounded-full border border-transparent bg-white/30 px-4 py-1.5 text-sm font-medium text-black/80 transition-all hover:bg-white/50 focus:outline-none cursor-pointer"
+                      data-agent="custom"
+                    >
+                      <span class="mr-1">+</span> Personalizzato
+                    </button>
+                  </div>
+                </div>
+
+                <style>
+                  .voice-agent-pill.active {
+                    cursor: default !important;
+                  }
+                  .voice-agent-pill.active:hover {
+                    background-color: white !important;
+                  }
+                </style>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                    const pills = document.querySelectorAll('.voice-agent-pill');
+                    pills.forEach(pill => {
+                      pill.addEventListener('click', function() {
+                        pills.forEach(p => {
+                          p.classList.remove('active', 'bg-white', 'border-white', 'text-[#9333ea]');
+                          p.classList.add('bg-white/30', 'border-transparent', 'text-black/80');
+                        });
+                        this.classList.remove('bg-white/30', 'border-transparent', 'text-black/80');
+                        this.classList.add('active', 'bg-white', 'border-white', 'text-[#9333ea]');
+                      });
+                    });
+                  });
+                </script>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
+                  <!-- Start Call Button (in browser) with glass underlay -->
+                  <div class="relative p-1">
+                    <!-- Glass underlay background -->
+                    <div class="absolute inset-0 bg-white/20 backdrop-blur-md rounded-full border border-white/30"></div>
+                    <button
+                      type="button"
+                      class="relative cursor-pointer group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#7B3FE4] via-[#C23DBE] to-[#F06A3A] px-7 py-3 text-base font-medium text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#7B3FE4]/50"
+                      id="start-call-btn"
+                    >
+                      <span>Inizia Chiamata</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Call Phone Number Button -->
+                  <a
+                    href="tel:+1234567890"
+                    class="group inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/20 backdrop-blur-sm px-7 py-3 text-base font-medium text-white transition-all hover:bg-white/30 hover:scale-105 focus:outline-none"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    <span>Chiamaci Invece</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- voice animation svg  -->
+      <div
+        data-ns-animate
+        data-instant
+        data-delay="0.7"
+        class="flex items-center justify-center"
+        aria-label="Visualizzazione forma d'onda vocale"
+        role="img"
+      >
+        <Component src="src/components/pages/ai-voice-generator/hero-voice.htm" />
+      </div>
+    </div>
+  </div>
+</section>
