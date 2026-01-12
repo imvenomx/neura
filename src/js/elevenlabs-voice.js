@@ -126,11 +126,16 @@ export function initElevenLabsVoice(lang = 'en', suffix = '') {
     callStatus.textContent = t.connecting;
 
     try {
-      // Build session config - use WebRTC for more stable connection
+      // Build session config
       const sessionConfig = {
         agentId: AGENT_ID,
+        overrides: {
+          tts: {
+            voiceId: voiceIds[selectedVoice]
+          }
+        },
         onConnect: () => {
-          console.log('Connected to ElevenLabs');
+          console.log('Connected to ElevenLabs with voice:', selectedVoice);
           callStatus.textContent = t.connected;
         },
         onDisconnect: () => {
@@ -139,8 +144,11 @@ export function initElevenLabsVoice(lang = 'en', suffix = '') {
         },
         onError: (error) => {
           console.error('Conversation error:', error);
-          callStatus.textContent = t.connectionError;
-          setTimeout(() => endConversation(), 2000);
+          // Don't show error to user if it's just the disconnect error
+          if (error && error.message) {
+            callStatus.textContent = t.connectionError;
+            setTimeout(() => endConversation(), 2000);
+          }
         },
         onModeChange: (mode) => {
           console.log('Mode changed:', mode);
