@@ -130,8 +130,10 @@ export function initElevenLabsVoice(lang = 'en', suffix = '') {
       const sessionConfig = {
         agentId: AGENT_ID,
         overrides: {
-          tts: {
-            voiceId: voiceIds[selectedVoice]
+          agent: {
+            tts: {
+              voiceId: voiceIds[selectedVoice]
+            }
           }
         },
         onConnect: () => {
