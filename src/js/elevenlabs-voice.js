@@ -131,14 +131,11 @@ export function initElevenLabsVoice(lang = 'en', suffix = '') {
       console.log('Starting conversation with voice:', selectedVoice, 'Voice ID:', selectedVoiceId);
 
       // Build session config with voice override
-      // Note: Using snake_case 'voice_id' as ElevenLabs API may expect this format
       const sessionConfig = {
         agentId: AGENT_ID,
         overrides: {
-          agent: {
-            tts: {
-              voice_id: selectedVoiceId
-            }
+          tts: {
+            voiceId: selectedVoiceId
           }
         },
         onConnect: () => {
