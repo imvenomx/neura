@@ -59,143 +59,16 @@
         <div class="space-y-6">
           <div class="space-y-2">
             <h3 class="text-heading-5 font-normal text-secondary">Contattaci</h3>
-            <p class="text-tagline-2 text-secondary/60">Compila il modulo e ti ricontatteremo entro 24 ore.</p>
+            <p class="text-tagline-2 text-secondary/60">Prenota una chiamata e ti ricontatteremo entro 24 ore.</p>
           </div>
 
-          <form action="/it/index.html" method="POST" class="space-y-5">
-            <!-- Name and Last Name row -->
-            <div class="flex items-center flex-col md:flex-row gap-5 justify-between">
-              <!-- First name -->
-              <div class="space-y-2 w-full">
-                <label
-                  for="firstname"
-                  class="block text-tagline-2 text-secondary font-medium"
-                >Nome</label>
-                <input
-                  type="text"
-                  id="firstname"
-                  name="firstname"
-                  placeholder="Inserisci il tuo nome"
-                  required
-                  autocomplete="given-name"
-                  class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
-                />
-              </div>
-
-              <!-- Last name -->
-              <div class="space-y-2 w-full">
-                <label
-                  for="lastname"
-                  class="block text-tagline-2 text-secondary font-medium"
-                >Cognome</label>
-                <input
-                  type="text"
-                  id="lastname"
-                  name="lastname"
-                  placeholder="Inserisci il tuo cognome"
-                  required
-                  autocomplete="family-name"
-                  class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
-                />
-              </div>
-            </div>
-
-            <!-- Company name and Role row -->
-            <div class="flex items-center flex-col md:flex-row gap-5 justify-between">
-              <!-- Company name -->
-              <div class="space-y-2 w-full">
-                <label
-                  for="company"
-                  class="block text-tagline-2 text-secondary font-medium"
-                >Nome azienda</label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  placeholder="Inserisci il nome dell'azienda"
-                  required
-                  autocomplete="organization"
-                  class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
-                />
-              </div>
-
-              <!-- Role -->
-              <div class="space-y-2 w-full">
-                <label
-                  for="role"
-                  class="block text-tagline-2 text-secondary font-medium"
-                >Ruolo</label>
-                <input
-                  type="text"
-                  id="role"
-                  name="role"
-                  placeholder="Inserisci il tuo ruolo"
-                  required
-                  autocomplete="organization-title"
-                  class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
-                />
-              </div>
-            </div>
-
-            <!-- Phone number -->
-            <div class="space-y-2">
-              <label
-                for="phone"
-                class="block text-tagline-2 text-secondary font-medium"
-              >Numero di telefono</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Inserisci il tuo numero di telefono"
-                required
-                autocomplete="tel"
-                class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
-              />
-            </div>
-
-            <!-- Email -->
-            <div class="space-y-2">
-              <label
-                for="email"
-                class="block text-tagline-2 text-secondary font-medium"
-              >Indirizzo email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Inserisci il tuo indirizzo email"
-                required
-                autocomplete="email"
-                class="w-full px-[18px] py-3 h-[48px] rounded-full border border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/40 focus:outline-none focus:border-[#9333ea] placeholder:text-tagline-2 placeholder:font-normal font-normal transition-colors"
-              />
-            </div>
-
-            <!-- terms checkbox -->
-            <fieldset class="flex items-center gap-2">
-              <label for="terms" class="flex items-center gap-x-3">
-                <input id="terms" type="checkbox" class="sr-only peer" required />
-                <span
-                  class="size-4 rounded-full border border-stroke-3 relative after:absolute after:size-2.5 after:bg-[#9333ea] after:rounded-full after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-0 peer-checked:after:opacity-100 peer-checked:border-[#9333ea] cursor-pointer transition-colors"
-                ></span>
-              </label>
-              <label
-                for="terms"
-                class="text-tagline-3 cursor-pointer text-secondary/60"
-              >
-                Accetto i
-                <a href="#" class="text-[#9333ea] underline text-tagline-3">termini e condizioni</a>
-              </label>
-            </fieldset>
-
-            <!-- submit button -->
-            <button
-              type="submit"
-              class="w-full rounded-full bg-gradient-to-r from-[#7B3FE4] via-[#C23DBE] to-[#F06A3A] px-8 py-4 text-base font-medium text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#9333ea]/50"
-            >
-              Invia Richiesta
-            </button>
-          </form>
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/booking/Dwg1O3EFWSoWltAkXqcE"
+            style="width: 100%; min-height: 600px; border: none; overflow: hidden;"
+            scrolling="no"
+            id="Dwg1O3EFWSoWltAkXqcE_1769354883330"
+          ></iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
         </div>
       </div>
     </div>
